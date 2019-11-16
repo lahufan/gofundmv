@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "GoFundMv",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Donation Website",
     "keywords": [
         "framework",
         "laravel"
