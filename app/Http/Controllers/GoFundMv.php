@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Post;
 
-use App\Donation;
 use Illuminate\Http\Request;
 
-class DonationController extends Controller
+class GoFundMv extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,14 @@ class DonationController extends Controller
      */
     public function index()
     {
-        $donations = Donation::all();
-        return view('donations.index', compact('donations'));
+
+        //open posts x 3
+        $openPosts = Post::latest()->take(3)->get();
+        //recent posts x 3
+
+        //most donated posts x 3
+
+        return view('goFundMv', compact('openPosts'));
     }
 
     /**
@@ -42,21 +48,21 @@ class DonationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Donation  $donation
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Donation $donation)
+    public function show($id)
     {
-        return view('donations.show', $donation);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Donation  $donation
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Donation $donation)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +71,10 @@ class DonationController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Donation  $donation
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Donation $donation)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +82,10 @@ class DonationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Donation  $donation
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Donation $donation)
+    public function destroy($id)
     {
         //
     }

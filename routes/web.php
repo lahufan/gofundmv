@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('goFundMv');
-});
+Route::get('/', 'GoFundMv@index');
 
 Auth::routes();
 
@@ -24,3 +22,5 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::resource('users', 'UserController');
 
 Route::resource('posts', 'PostController');
+Route::get('/donations', 'DonationController@index');
+// Route::get('donation/{donation}', 'DonationController');
