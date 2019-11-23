@@ -11,16 +11,22 @@
             <table class="table">
                 <thead>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>Severity</th>
+                    <th>Status</th>
+                    <th>Info</th>
+                    <th>Goal</th>
+                    <th>Raised</th>
                     <th></th>
                 </thead>
                 <tbody>
                     @foreach($posts as $post)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td><a href="{{ route('posts.show', $post->id) }}">{{ $post->name }}</a></td>
-                        <td>{{ $post->email }}</td>
+                        <td><a href="{{ route('posts.show', $post->id) }}">{{ $post->severity }}</a></td>
+                        <td>{{ $post->status }}</td>
+                        <td>{{ $post->info }}</td>
+                        <td>{{ $post->goal }}</td>
+                        <td>{{ $post->raised }}</td>
                         <td>
                             <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-warning btn-sm">Edit</a>
                         </td>

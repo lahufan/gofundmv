@@ -13,6 +13,8 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Created On</th>
+                    <th></th>
                     <th></th>
                 </thead>
                 <tbody>
@@ -21,8 +23,12 @@
                         <td>{{ $loop->iteration }}</td>
                         <td><a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a></td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->created_at }}</td>
                         <td>
                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                        </td>
+                        <td>
+                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                     @endforeach

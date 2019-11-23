@@ -33,7 +33,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </form>
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Discover <span class="caret"></span>
+                                </a>
 
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">
+                                        Fund Raisers
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Success Stories
+                                    </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -55,17 +70,22 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/my-account">
+                                        My Account
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
+                            <a href="#" class="btn btn-primary">Start a GoFundMv</a>
                         @endguest
                     </ul>
                 </div>
@@ -75,6 +95,17 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <div class="container">
+            <div class="row mt-4 mb-4 border-top">
+                <div class="col-md-6 mt-2">
+                    <h6>Copyright - GoFundMV</h6>
+                </div>
+                <div class="col-md-6 mt-2 text-right">
+                    <a href="#" class="mr-4">About Us </a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
