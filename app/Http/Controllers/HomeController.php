@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function myAccount()
+    {
+        return view('myAccount.index');
+    }
+
+    public function newPost()
+    {
+        return view('myAccount.posts.create');
+    }
 }

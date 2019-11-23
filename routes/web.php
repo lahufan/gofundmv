@@ -16,7 +16,7 @@ Route::get('/', 'GoFundMv@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post', 'PostController@index');
+//Route::get('/post', 'PostController@index');
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::resource('users', 'UserController');
@@ -24,3 +24,10 @@ Route::resource('users', 'UserController');
 Route::resource('posts', 'PostController');
 Route::get('/donations', 'DonationController@index');
 // Route::get('donation/{donation}', 'DonationController');
+
+// Frontend
+Route::resource('fund', 'FundController');
+
+//User Portal
+Route::get('/my-account', 'HomeController@myAccount');
+Route::get('/my-account/new-post', 'HomeController@newPost');

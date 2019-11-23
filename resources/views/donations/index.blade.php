@@ -11,7 +11,7 @@
                         <h4 class="card-title">MVR. {{ $donation->amount }}</h4>
                         <p class="card-text">{{ $donation->transaction_id }}</p>
                         <div class="text-sm-right">
-                            <small class="text-muted">{{ Str::limit($donation->date, 10); }}</small>
+                            <small class="text-muted">{{ Str::limit($donation->date, 10) }}</small>
                         </div>
                     </div>
             </div>
