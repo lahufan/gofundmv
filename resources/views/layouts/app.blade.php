@@ -85,7 +85,7 @@
                                     </form>
                                 </div>
                             </li>
-                            <a href="#" class="btn btn-primary">Start a GoFundMv</a>
+                            <a href="{{ url('/my-account/new-post') }}" class="btn btn-primary">Start a GoFundMv</a>
                         @endguest
                     </ul>
                 </div>
