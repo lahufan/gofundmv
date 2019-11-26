@@ -16,6 +16,8 @@ Route::get('/', 'GoFundMv@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/fundraisers', 'FundRaisers');
+Route::view('/successstories', 'SuccessStories');
 //Route::get('/post', 'PostController@index');
 
 Route::get('/dashboard', 'DashboardController@index');
