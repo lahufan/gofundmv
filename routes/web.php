@@ -22,6 +22,7 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::resource('users', 'UserController');
 
 Route::resource('posts', 'PostController');
+Route::post('/addpost', 'PostController@store');
 Route::get('/donations', 'DonationController@index');
 // Route::get('donation/{donation}', 'DonationController');
 
@@ -31,3 +32,5 @@ Route::resource('fund', 'FundController');
 //User Portal
 Route::get('/my-account', 'HomeController@myAccount');
 Route::get('/my-account/new-post', 'HomeController@newPost');
+//admin
+Route::get('/my-admin-account', 'HomeController@myAdminAccount');

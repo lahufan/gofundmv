@@ -57,6 +57,9 @@
         </div>
       @endforeach
       </div>
+      <div class="text-center mb-2">
+        <a href="" class="font-weight-bold">SEE ALL >></a>
+      </div>
     <div class="row">
         <div class="col-md-12 text-center">
             <h3 class="font-weight-bold">Feature Campaigns</h3>

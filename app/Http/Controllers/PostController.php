@@ -38,22 +38,22 @@ class PostController extends Controller
     {
         $this->validate($request,[
             'severity'=>'required',
-            'status'=>'required',
             'info'=>'required',
             'goal'=>'required',
-            'raised'=>'required'
          ]);
+        
 
         $post = new Post;
         $post->severity = $request->severity;
         $post->status = $request->status;
         $post->info = $request->info;
         $post->goal = $request->goal;
-        $post->raised = $request->raised;
-        $post->user_id = 1;
-        $post->save();
+        $post->raised = 0;
+        $post->user_id = 4;
 
-        return redirect()->back();
+        $post->save();
+        // return var_dump($request('severity'));        
+        return back()->with("success", "successfully added!");
     }
 
     /**
@@ -88,7 +88,9 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post = Post::find($request('id'));
+        // $post->raised =+ $request('amount');
+        $post->save();
     }
 
     /**
