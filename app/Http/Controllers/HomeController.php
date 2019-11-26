@@ -36,12 +36,6 @@ class HomeController extends Controller
             return view('myAccount.index', \compact('posts'));
         }
     }
-
-    public function myAdminAccount()
-    {
-        return view('myAdminAccount.index');
-    }
-
     
 
     public function newPost()

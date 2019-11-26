@@ -5,7 +5,7 @@
     <h2 class="text-center">Admin Dashboard</h2>
     <div class="row">
         <div class="col-md">
-            <a href="">
+        <a href="{{ url('posts') }}">
                 <div class="card mb-4 shadow-sm">
                     <img class="bd-placeholder-img card-img-top" src="{{ asset('images/post.png') }}" alt="">
                     <div class="card-body">
