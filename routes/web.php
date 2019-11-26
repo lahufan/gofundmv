@@ -35,4 +35,4 @@ Route::resource('fund', 'FundController');
 Route::get('/my-account', 'HomeController@myAccount');
 Route::get('/my-account/new-post', 'HomeController@newPost');
 //admin
-Route::get('/my-admin-account', 'HomeController@myAdminAccount');
+Route::get('/my-admin-account', 'HomeController@myAdminAccount')->middleware('admin');

@@ -29,8 +29,12 @@ class HomeController extends Controller
 
     public function myAccount()
     {
-        $posts = Post::all();
-        return view('myAccount.index', \compact('posts'));
+        if(auth()->user()->isAdmin==1){
+            return redirect('my-admin-account');
+        } else {
+            $posts = Post::all();
+            return view('myAccount.index', \compact('posts'));
+        }
     }
 
     public function myAdminAccount()
