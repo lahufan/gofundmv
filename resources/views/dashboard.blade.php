@@ -17,24 +17,24 @@
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <h1>4</h1>
-                            <h6>Some text</h6>
+                            <h1>12</h1>
+                            <h6>Donations</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <h1>4</h1>
-                            <h6>Some text</h6>
+                            <h1>7</h1>
+                            <h6>Fund Raisers</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <h1>4</h1>
-                            <h6>Some text</h6>
+                            <h1>6</h1>
+                            <h6>Funds Required</h6>
                         </div>
                     </div>
                 </div>

@@ -50,6 +50,12 @@ class DonationController extends Controller
         return view('donations.show', $donation);
     }
 
+    public function showDonations($id){
+        // $donations = Donation::findOrFail($id);
+        $donations = Donation::all();
+        return view('donations.index', compact('donations'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

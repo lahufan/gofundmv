@@ -24,6 +24,8 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::resource('users', 'UserController');
 
 Route::resource('posts', 'PostController');
+Route::get('all-posts', 'PostController@allposts');
+Route::get('post/{id}', 'DonationController@showDonations');
 Route::post('/addpost', 'PostController@store');
 Route::get('/donations', 'DonationController@index');
 // Route::get('donation/{donation}', 'DonationController');

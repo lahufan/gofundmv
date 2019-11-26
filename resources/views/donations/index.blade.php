@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
+
 @foreach ($donations as $donation)
+{{-- @if($donations([])->isNotEmpty()) --}}
     <div class="container mx-auto w-50 text-center p-1">
             <div class="card ">
                     {{-- <img class="card-img-top" src="{{ asset('images/donation.bmp') }}" alt="donation"> --}}
@@ -16,5 +18,8 @@
                     </div>
             </div>
     </div>
-@endforeach
+    {{-- @else
+     <h2>No donations...</h2>
+     @endif --}}
+    @endforeach
 @endsection
